@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html ng-app="ui.bootstrap.demo">
+    <head>
+        <title>InsIght, IIT Bombay</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-inverse header">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand logo" href="#"><img src="images/insight%20logo.png" class="img-responsive"></a>
+                
+
+            </div>
+            <div class="collapse navbar-collapse" id="Navbar1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search for keywords">
+                    </div>
+                </form>
+              <ul class="nav navbar-nav navbar-right" id="text-main">
+                <li><a href="#">Print Issues</a></li>
+                <li><a href="#">Micro Sites</a></li>
+                <li><a href="#">Insti Links</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+         <nav class="navbar sub-header">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar2">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="Navbar2">
+              <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#">ACADEMICS</a></li>
+                <li><a href="#">CULTURALS</a></li>
+                <li><a href="#">SPORTS</a></li>
+                <li><a href="#">TECHNICAL</a></li>
+                <li><a href="#">INSTI BODIES</a></li>
+                <li><a href="#">MISCELLANEOUS</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        
+        
+        <div class="container-fluid">
+            <div class="row content">
+                <div ng-controller="CarouselCtrl">
+                    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                      <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                          <h4>Slide {{slide.id}}</h4>
+                          <p>{{slide.text}}</p>
+                        </div>
+                      </uib-slide>
+                    </uib-carousel>
+                </div>
+            </div>
+            <div class="row text">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                  <div class="row text-center text-head">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 all">RECENT</div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 all">POPULAR</div>
+                  </div>
+
+                  <!-- Main News Feed -->
+                  <div class="row text-center text-body main-section">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-3 col-sm-3 col-md-4 col-xs-4">
+                          <img src="images/prof.png" class="img-responsive">
+                        </div>
+                        <div class="col-lg-9 col-sm-9 col-md-8 col-xs-8 text-left">
+                          <div id="h1" class="text-left">KNOW YOUR PROF: IN CONVERSATION WITH PROF. V.M GADRE</div>
+                          <div id="h2">
+                              <span>16th June 2015</span>
+                              <span class="pull-right">By Shreeyesh Nagur</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div id="h3">
+                           
+                              <div id="ques">Q. A professor, informally often known as full professor, is the highest academic rank at universities and other post-secondary education and research institutions in most countries. 
+                              </div>
+                           
+                              <div id="ans">A. Literally, professor derives from Latin as a "person who professes" being usually an expert in arts or sciences, a teacher of the highest rank. In some countries, the word professor is also used in titles of lower ranks such as associate professor and assistant professor.
+                        
+                            Professors conduct original research and commonly teach undergraduate, graduate, and/or professional courses in their field of expertise. In universities with graduate schools, professors may mentor and supervise graduate students who are conducting research for a thesis or dissertation. Professors typically hold a Ph.D., another doctorate or a different terminal degree. Some professors hold a master's degree or a professional degree such as an MD as their highest degree
+                            </div>
+                          </div>
+                            <div id="h4" class="pull-right">View Full Story</div>
+                        </div>
+                    </div>
+
+                  </div>
+                  
+                  <div class="row text-center text-body main-section">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-3 col-sm-3 col-md-4 col-xs-4">
+                          <img src="images/prof.png" class="img-responsive">
+                        </div>
+                        <div class="col-lg-9 col-sm-9 col-md-8 col-xs-8 text-left">
+                          <div id="h1" class="text-left">KNOW YOUR PROF: IN CONVERSATION WITH PROF. V.M GADRE</div>
+                          <div id="h2">
+                              <span>16th June 2015</span>
+                              <span class="pull-right">By Shreeyesh Nagur</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div id="h3">
+                           
+                              <div id="ques">Q. A professor, informally often known as full professor, is the highest academic rank at universities and other post-secondary education and research institutions in most countries. 
+                              </div>
+                           
+                              <div id="ans">A. Literally, professor derives from Latin as a "person who professes" being usually an expert in arts or sciences, a teacher of the highest rank. In some countries, the word professor is also used in titles of lower ranks such as associate professor and assistant professor.
+                        
+                            Professors conduct original research and commonly teach undergraduate, graduate, and/or professional courses in their field of expertise. In universities with graduate schools, professors may mentor and supervise graduate students who are conducting research for a thesis or dissertation. Professors typically hold a Ph.D., another doctorate or a different terminal degree. Some professors hold a master's degree or a professional degree such as an MD as their highest degree
+                            </div>
+                          </div>
+                            <div id="h4" class="pull-right">View Full Story</div>
+                        </div>
+                    </div>
+
+                  </div>
+                  
+                </div>
+
+                <!-- Categorised News -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 acad">
+                    <div class="row text-body">
+                        <div id="h5">ACADEMICS</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div id="h6">KNOW YOUR PROF: IN CONVERSATION WITH PROF. V.M GADRE</div>
+                            <div id="h7">
+                              <span>16th June 2015</span>
+                              <span class="pull-right">By Shreeyesh Nagur</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                                  <img src="images/prof.png" class="img-responsive">
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                                  <div id="h8">A professor, informally often known as full professor, is the highest academic rank at universities and other post-secondary education and research institutions in most countries. Literally, professor derives from Latin as a "person who professes" being usually an expert in arts or sciences, a teacher of the highest rank. In some countries, the word professor is also used in titles of lower ranks such as associate professor and assistant professor.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row footer">
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 text-left">
+                    <div id="h9">Chief Editors</div>
+                    <div class="row">
+                        <div class="col-lg-3" id="h10">
+                            <span>Mihir Kulkarni</span><br>
+                            <span>9167468132</span>
+                        </div>
+                        <div class="col-lg-3" id="h10">
+                            <span>Niranjan Thakurdesai</span><br>
+                            <span>9928279751</span>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-right" id="h11">
+                    <span>Mail us at: insight@iitb.ac.in</span><br>
+                    <span>&copy; 2015, INSIGHT IIT BOMBAY</span>
+                </div>
+            </div>
+        </div>        
+    </body>
+    
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-1.0.0.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    
+</html>
